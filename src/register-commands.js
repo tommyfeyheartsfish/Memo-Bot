@@ -1,10 +1,30 @@
 require('dotenv').config();
-const {REST, Routes} = require('discord.js');
+const {REST, Routes, ApplicationCommandOptionType} = require('discord.js');
 
-const commands =[
+const commands = [
     {
-        name: 'hey',
-        description: 'Replies with hey',
+        name: 'add',
+        description: 'add new word to the database',
+        options: [
+            {
+                name: '中文',
+                description: 'The Chinese word to add',
+                type: ApplicationCommandOptionType.String,
+                required: true
+            }
+        ]
+    },
+    {
+        name: 'delete',
+        description: 'delete a word from the database',
+        options:[
+            {
+                name: 'word',
+                description: 'The word to delete',
+                type: ApplicationCommandOptionType.String,
+                required: true,
+            }
+        ]
     },
 ];
 
