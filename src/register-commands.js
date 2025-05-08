@@ -19,7 +19,7 @@ const commands = [
         description: 'delete a word from the database',
         options:[
             {
-                name: 'word',
+                name: '中文',
                 description: 'The word to delete',
                 type: ApplicationCommandOptionType.String,
                 required: true,
